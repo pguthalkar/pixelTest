@@ -1,0 +1,28 @@
+
+
+<div class="container-fluid">
+    <!-- Breadcrumbs-->
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        Photos of {{albumIndex}} Album
+      </li>
+    </ol>
+  
+    <!-- <alert></alert>  -->
+  
+    <div fxLayout="row">
+
+      <div class="example-container mat-elevation-z8">
+        <mat-grid-list cols="5" rowHeight="2:2">
+            <mat-grid-tile *ngFor="let photo of photos">
+                <mat-card class="example-card">
+                  
+                      <img mat-card-image src="{{photo.thumbnailUrl}}" alt="Photo of a Shiba Inu">
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+          
+      </div>
+    </div>
+  </div>
+  

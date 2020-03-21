@@ -49,14 +49,10 @@ export class PhotosComponent implements OnInit {
           }
           this.photos = this.photosByIndex[this.albumIndex];
          
-        },10 * 1000)
+        },20 * 1000)
       } else {
         this.photos = allPhotos;
       }
-      console.log(this.photosByIndex);
-      
-      
-      //this.dataSource = new MatTableDataSource<any>(this.photos);
   });
   }
 

@@ -20,7 +20,6 @@ export class UsersComponent implements OnInit {
 
 
     this.httpService.getHttpResult('users', {}).subscribe(users => {
-        console.log(users);
         this.users = users;
         this.dataSource = new MatTableDataSource<any>(this.users);
         this.dataSource.paginator = this.paginator;

@@ -29,7 +29,6 @@ export class AlbumsComponent implements OnInit {
   ngOnInit() {
     const id: number = parseInt(this.route.snapshot.paramMap.get('id'));
     this.httpService.getHttpResult('albums', {}).subscribe(albums => {
-        console.log(albums);
         this.albums = albums.filter(album => {
           return album.userId === id;
         });
